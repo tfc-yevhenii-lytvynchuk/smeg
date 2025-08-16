@@ -1,4 +1,5 @@
 @font-face {
   font-family: Raleway;
-  src: url(Raleway.ttf) format("ttf");
+  src: url(Raleway.ttf) format("truetype");
+  font-display: swap
 }

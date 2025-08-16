@@ -10,9 +10,37 @@
   <link rel="stylesheet" href="assets/fonts/smeg-fonts.css">
   <link rel="stylesheet" href="assets/css/range-input.css">
 </head>
+<style>
+  .banner-section {
+    position: relative;
+  }
+  .banner-section-image {
+    width: 100%;
+    max-height: 350px;
+    min-height: 310px;
+    background: black;
+  }
+  .banner-section-content {
+    padding: 48px;
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner-section-content {
+      max-width: 100%;
+      width: 100%;
+      padding: 16px;
+      left: 16px;
+    }
+  }
+
+</style>
 <body>
-  <header class="sticky-top">
-    <nav class="navbar  navbar-expand-lg bg-white">
+  <header class="sticky-top text-white">
+    <nav class="navbar navbar-expand-lg bg-black">
       <div class="container-fluid smeg-container">
         <a href="#" class="me-4">
           <img class="smeg-header-logo" src="assets/images/logo.svg" alt="SMEG">
@@ -24,10 +52,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto gap-3 nav-underline">
             <li class="nav-item">
-              <a href="home.html" class="nav-link" aria-current="page">MAIN</a>
+              <a href="home.html" class="nav-link active" aria-current="page">MAIN</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link active dropdown-toggle" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
+              <a href="#" class="nav-link dropdown-toggle" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
               <div class="dropdown-menu">
                 <div class="smeg-nav-dropdown-menu-content py-3">
                   <div class="smeg-container d-flex flex-wrap gap-5">
@@ -153,6 +181,17 @@
   </div>
 
   <main>
+    <section class="smeg-section mt-0 position-relative bg-black">
+      <div class="banner-section-image">
+      
+      </div>
+      <div class="smeg-container">
+        <div class="banner-section-content text-white">
+          <h1 class="m-0">Free-standing refrigerators</h1>
+          <p class="mt-3 mb-4 text-opacity-75 text-white">Smeg's ongoing research has resulted in the free-standing refrigerator range, which has something for everyone thanks to its wide-ranging aesthetic principles.</p>
+        </div>
+      </div>
+    </section>
     <section class="smeg-section mb-4">
       <div class="smeg-container mb-4">
         <h1 class="display-5">Fridge-freezers</h1>
@@ -162,7 +201,7 @@
           <form class="d-flex flex-column h-100" action="">
             <div class="p-3 border-bottom">
               <div class=" d-flex align-items-center justify-content-between">
-                <span class="fw-medium fs-5">Price</span>
+                <span class="fw-bold fs-5">Price</span>
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#price-range-collapse" aria-expanded="false" aria-controls="price-range-collapse"><i class="bi bi-chevron-down text-primary"></i></button>
               </div>
               <div class="collapse mt-3" id="price-range-collapse">
@@ -193,7 +232,7 @@
             </div>
             <div class="p-3 border-bottom">
               <div class=" d-flex align-items-center justify-content-between">
-                <span class="fw-medium fs-5">Filter Category 2</span>
+                <span class="fw-bold fs-5">Filter Category 2</span>
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#filter-category-2" aria-expanded="false" aria-controls="filter-category-2"><i class="bi bi-chevron-down text-primary"></i></button>
               </div>
               <div class="collapse mt-3" id="filter-category-2">
@@ -211,7 +250,7 @@
             </div>
             <div class="p-3 border-bottom">
               <div class=" d-flex align-items-center justify-content-between">
-                <span class="fw-medium fs-5">Filter Category 1</span>
+                <span class="fw-bold fs-5">Filter Category 1</span>
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#product-category" aria-expanded="false" aria-controls="product-category"><i class="bi bi-chevron-down text-primary"></i></button>
               </div>
               <div class="collapse mt-3" id="product-category">
@@ -466,6 +505,9 @@
 
   <footer class="smeg-footer text-white">
     <div class="smeg-container">
+      <div class="d-flex justify-content-between mb-4 flex-wrap flex-column flex-md-row gap-4">
+        <img width="123" src="assets/images/logo.svg" alt="SMEG" class="img-fluid">
+      </div>
       <div class="d-flex gap-4 justify-content-between flex-wrap flex-column flex-md-row">
         <div class="d-flex flex-column gap-3">
           <span class="fw-bold mb-2">Products</span>
@@ -496,13 +538,12 @@
         </div>
       </div>
       <div class="d-flex justify-content-between mt-5 flex-wrap flex-column flex-md-row gap-4">
-        <img width="160" height="20" src="assets/images/logo-white.svg" alt="SMEG" class="img-fluid">
         <div class="d-flex gap-4 align-items-start align-items-md-center flex-column flex-md-row">
           <a class="text-secondary" href="">Imprint</a>
           <a class="text-secondary" href="">Terms of Use</a>
           <a class="text-secondary" href="">Privacy Policy</a>
         </div>
-        <p class="m-0">© 2025 SMEG Group. All rights reserved.</p>
+        <p class="m-0 text-white text-opacity-75">© 2025 SMEG Group. All rights reserved.</p>
       </div>
     </div>
   </footer>

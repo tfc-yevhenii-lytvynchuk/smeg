@@ -47,7 +47,7 @@ The following sections are designed to be populated dynamically:
 
 2. **Dynamic Content Classes**
    - Product cards: `smeg-product-card`
-   - Category cards: `liebher-product-category-card`
+   - Category cards: `smeg-product-category-card`
    - Navigation items: `nav-link`
 
 3. **Image Handling**

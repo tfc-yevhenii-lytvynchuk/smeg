@@ -52,8 +52,8 @@
   </style>
 </head>
 <body>
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg bg-white">
+  <header class="sticky-top text-white">
+    <nav class="navbar navbar-expand-lg bg-black">
       <div class="container-fluid smeg-container">
         <a href="#" class="me-4">
           <img class="smeg-header-logo" src="assets/images/logo.svg" alt="SMEG">
@@ -65,10 +65,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto gap-3 nav-underline">
             <li class="nav-item">
-              <a href="home.html" class="nav-link">MAIN</a>
+              <a href="home.html" class="nav-link active" aria-current="page">MAIN</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
+              <a href="#" class="nav-link dropdown-toggle" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
               <div class="dropdown-menu">
                 <div class="smeg-nav-dropdown-menu-content py-3">
                   <div class="smeg-container d-flex flex-wrap gap-5">
@@ -175,7 +175,7 @@
               <span class="d-lg-none">Compare Products</span>
             </a>
             <a><i class="bi bi-person"></i> <span class="d-lg-none">Profile</span> </a>
-            <a class="text-primary" href="cart.html"><i class="bi bi-cart"></i> <span class="d-lg-none">Cart</span> </a>
+            <a href="cart.html"><i class="bi bi-cart"></i> <span class="d-lg-none">Cart</span> </a>
           </div>
         </div>
       </div>
@@ -335,6 +335,9 @@
 
   <footer class="smeg-footer text-white">
     <div class="smeg-container">
+      <div class="d-flex justify-content-between mb-4 flex-wrap flex-column flex-md-row gap-4">
+        <img width="123" src="assets/images/logo.svg" alt="SMEG" class="img-fluid">
+      </div>
       <div class="d-flex gap-4 justify-content-between flex-wrap flex-column flex-md-row">
         <div class="d-flex flex-column gap-3">
           <span class="fw-bold mb-2">Products</span>
@@ -365,13 +368,12 @@
         </div>
       </div>
       <div class="d-flex justify-content-between mt-5 flex-wrap flex-column flex-md-row gap-4">
-        <img width="160" height="20" src="assets/images/logo-white.svg" alt="smeg" class="img-fluid">
         <div class="d-flex gap-4 align-items-start align-items-md-center flex-column flex-md-row">
           <a class="text-secondary" href="">Imprint</a>
           <a class="text-secondary" href="">Terms of Use</a>
           <a class="text-secondary" href="">Privacy Policy</a>
         </div>
-        <p class="m-0">© 2025 smeg Group. All rights reserved.</p>
+        <p class="m-0 text-white text-opacity-75">© 2025 SMEG Group. All rights reserved.</p>
       </div>
     </div>
   </footer>
