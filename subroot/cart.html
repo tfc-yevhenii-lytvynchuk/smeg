@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - SMEG B2B Portal</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/fonts/smeg-fonts.css">
+
+  <style>
+  /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .card-product-quantity-form {
+      width: 122px;
+      height: max-content;
+      position: relative;
+    }
+
+    .card-product-quantity-form button.plus,
+    .card-product-quantity-form button.minus {
+      position: absolute;
+    } 
+    .card-product-quantity-form button.plus {
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .card-product-quantity-form button.minus {
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .checkout-button-link {
+      width: max-content;
+      margin-left: auto;
+    }
+    .empty-state-description {
+      max-width: 660px;
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid smeg-container">
+        <a href="#" class="me-4">
+          <img class="smeg-header-logo" src="assets/images/logo.svg" alt="SMEG">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto gap-3 nav-underline">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link">MAIN</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
+              <div class="dropdown-menu">
+                <div class="smeg-nav-dropdown-menu-content py-3">
+                  <div class="smeg-container d-flex flex-wrap gap-5">
+                    <!-- CATEGORIES TABS TRIGGERS -->
+                    <div class="d-flex flex-column" role="tablist">
+                      <div class="d-flex flex-column">
+                        <!--  Fridge-freezers  -->
+                        <a class="nav-link active" data-bs-toggle="tab"  data-bs-target="#fridge-freezers-subcategories" role="button" aria-selected="true">
+                          <div class="d-flex align-items-center gap-3 text-nowrap ">
+                            <span class="fw-bold">Fridge-freezers</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Side-by-Side Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#side-by-side-fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Side-by-Side Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Wine Cellars -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#wine-cellars-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Wine Cellars</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+  
+                      </div>
+                    </div>
+                      <!-- SUBCATEGORIES TABS -->
+                    <div class="tab-content">
+                      <!-- Fridge-freezers subcategories -->
+                      <div id="fridge-freezers-subcategories" class="tab-pane fade show active" role="tabpanel" aria-labelledby="fridge-freezers-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Freestanding fridge-freezers</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fully integrated fridge-freezers</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Fridges subcategories -->
+                      <div id="fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Side-by-Side Fridges -->
+                      <div id="side-by-side-fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="side-by-side-fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Wine Cellars -->
+                      <div id="wine-cellars-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="wine-cellars-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars B</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">RESOURCES</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">CONTACT</a>
+            </li>
+          </ul>
+          <form id="nav-search-form" class="nav-search-form d-flex" role="search">
+            <input class="form-control me-2" id="nav-search-input" name="nav-search-input" type="search" placeholder="Search" aria-label="Search" autocomplete="on"/>
+            <button type="submit"><i class="bi bi-search me-2"></i></button>
+          </form>
+          <div class="d-flex gap-3 flex-column flex-lg-row">
+            <a><i class="bi bi-heart"></i> <span class="d-lg-none">Favorites</span></a> 
+            <a href="compare-products.html">
+              <i class="bi bi-back"></i>
+              <span class="d-lg-none">Compare Products</span>
+            </a>
+            <a><i class="bi bi-person"></i> <span class="d-lg-none">Profile</span> </a>
+            <a class="text-primary" href="cart.html"><i class="bi bi-cart"></i> <span class="d-lg-none">Cart</span> </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="smeg-breadcrumb">
+    <nav class="smeg-container" aria-label="breadcrumb">
+      <ol class="breadcrumb py-1 py-lg-2 m-0">
+        <li class="breadcrumb-item" aria-current="page"><a href="home.html"><i class="bi bi-house"></i> Main</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+      </ol>
+    </nav>
+  </div>
+
+  <main>
+    <section class="smeg-section mb-4">
+      <div class="smeg-container">
+        <div class="d-flex justify-content-between align-items-center pb-3 mb-3">
+          <h1 class="display-5">Cart</h1>
+          <a href="products-list.html" class="text-uppercase text-body-secondary fs-7"><i class="bi bi-arrow-left"></i> BACK TO PRODUCTS</a>
+        </div>
+        <!-- HEADER ROW -->
+        <div class="row g-0 pb-3 mb-3 border-bottom d-none d-md-flex">
+          <div class="col-6"><span class="text-uppercase text-body-secondary fs-7">PRODUCT</span></div>
+          <div class="col col-md-2 d-none d-lg-flex"><span class="text-uppercase text-body-secondary fs-7">PRICE</span></div>
+          <div class="col-8 col-md-4 col-lg-2"><span class="text-uppercase text-body-secondary fs-7">QUANTITY</span></div>
+          <div class="col-4 col-md-2 col-lg-2"><span class="text-uppercase text-body-secondary fs-7 d-flex justify-content-end">TOTAL</span></div>
+        </div>
+        <!-- EMPTY STATE -->
+        <div class="cart-empty-state d-flex flex-column align-items-center justify-content-center text-center mb-4">
+          <img width="230" src="assets/images/cart-empty.svg" alt="Empty shopping cart illustration">
+          <h2 class="display-6">Cart is empty</h2>
+          <p class="empty-state-description text-body-secondary">
+            Before proceed to checkout you must add some products to your shopping cart.
+            You will find a lot of interesting products on our "Products" page.
+          </p>
+        </div>
+        <!-- PRODUCT ROW -->
+        <div class="row gx-0 gy-3 pb-3 mb-3 border-bottom">
+          <div class="col-12 col-md-6">
+            <div class="d-flex flex-column flex-lg-row gap-3">
+              <img width="100" height="100" class="object-fit-contain" src="assets/images/product-carousel/1.png" alt="smeg refrigerator product thumbnail" loading="lazy">
+              <div class="d-flex flex-column gap-2">
+                <h5 class="fs-4">RBbsc 123i FreshPlusr</h5>
+                <div class="d-flex gap-3 align-items-center flex-wrap">
+                  <span class="text-body-secondary">RB123432324534</span>
+                  <img width="44" src="assets/images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++" loading="lazy">
+                  <span class="text-body-secondary">White</span>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                  <a href="product-item.html" class="text-body-secondary text-decoration-underline text-uppercase fw-bold fs-7">See product <i class="bi bi-chevron-right"></i></a>
+                  <span class="text-success fs-7"> <i class="bi bi-check2"></i> Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col col-md-2 d-none d-lg-flex align-items-center"><span class="fs-4">€ 1,234.56</span></div>
+  
+          <div class="col-8 col-md-4 col-lg-2 d-flex align-items-center gap-2 flex-wrap">
+            <form class="card-product-quantity-form" action="">
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i class="bi bi-dash-lg fs-5"></i></button>
+              <input type="number" class="form-control text-center" value="1" name="quantity" min="1" max="100">
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i class="bi bi-plus-lg fs-5"></i></button>
+            </form>
+            <form action="">
+              <button type="submit" class="btn btn-outline-danger px-3"><i class="bi bi-trash"></i></button>
+            </form>
+          </div>
+  
+          <div class="col-4 col-md-2 col-lg-2 d-flex align-items-center justify-content-end"><span class="fs-4">€ 1,234.56</span></div>
+  
+        </div>
+        <!-- PRODUCT ROW -->
+        <div class="row gx-0 gy-3 pb-3 mb-3 border-bottom">
+          <div class="col-12 col-md-6">
+            <div class="d-flex flex-column flex-lg-row gap-3">
+              <img width="100" height="100" class="object-fit-contain" src="assets/images/product-carousel/2.png" alt="smeg refrigerator product thumbnail" loading="lazy">
+              <div class="d-flex flex-column gap-2">
+                <h5 class="fs-4">test test test test test test</h5>
+                <div class="d-flex gap-3 align-items-center flex-wrap">
+                  <span class="text-body-secondary">TESTTESTTESTTESTTESTTESTTESTTEST</span>
+                  <img width="44" src="assets/images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++" loading="lazy">
+                  <span class="text-body-secondary">White</span>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                  <a href="product-item.html" class="text-body-secondary text-decoration-underline text-uppercase fw-bold fs-7">See product <i class="bi bi-chevron-right"></i></a>
+                  <span class="text-success fs-7"> <i class="bi bi-check2"></i> Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col col-md-2 d-none d-lg-flex align-items-center"><span class="fs-4">€ 1,234.56</span></div>
+  
+          <div class="col-8 col-md-4 col-lg-2 d-flex align-items-center gap-2 flex-wrap">
+            <form class="card-product-quantity-form" action="">
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i class="bi bi-dash-lg fs-5"></i></button>
+              <input type="number" class="form-control text-center" value="2" name="quantity" min="1" max="100">
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i class="bi bi-plus-lg fs-5"></i></button>
+            </form>
+            <form action="">
+              <button type="submit" class="btn btn-outline-danger px-3"><i class="bi bi-trash"></i></button>
+            </form>
+          </div>
+  
+          <div class="col-4 col-md-2 col-lg-2 d-flex align-items-center justify-content-end"><span class="fs-4">€ 2,469.12</span></div>
+  
+        </div>
+        <!-- PRODUCT ROW -->
+        <div class="row gx-0 gy-3 pb-3 mb-3 border-bottom">
+          <div class="col-12 col-md-6">
+            <div class="d-flex flex-column flex-lg-row gap-3">
+              <img width="100" height="100" class="object-fit-contain" src="assets/images/product-carousel/3.png" alt="smeg refrigerator product thumbnail" loading="lazy">
+              <div class="d-flex flex-column gap-2">
+                <h5 class="fs-4">test test testtesttesttest test test test</h5>
+                <div class="d-flex gap-3 align-items-center flex-wrap">
+                  <span class="text-body-secondary">TESTTESTTESTTESTTESTTESTTESTTEST</span>
+                  <img width="44" src="assets/images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++" loading="lazy">
+                  <span class="text-body-secondary">White</span>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                  <a href="product-item.html" class="text-body-secondary text-decoration-underline text-uppercase fw-bold fs-7">See product <i class="bi bi-chevron-right"></i></a>
+                  <span class="text-success fs-7"> <i class="bi bi-check2"></i> Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col col-md-2 d-none d-lg-flex align-items-center"><span class="fs-4">€ 1,234.56</span></div>
+  
+          <div class="col-8 col-md-4 col-lg-2 d-flex align-items-center gap-2 flex-wrap">
+            <form class="card-product-quantity-form" action="">
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i class="bi bi-dash-lg fs-5"></i></button>
+              <input type="number" class="form-control text-center" value="3" name="quantity" min="1" max="100">
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i class="bi bi-plus-lg fs-5"></i></button>
+            </form>
+            <form action="">
+              <button type="submit" class="btn btn-outline-danger px-3"><i class="bi bi-trash"></i></button>
+            </form>
+          </div>
+  
+          <div class="col-4 col-md-2 col-lg-2 d-flex align-items-center justify-content-end"><span class="fs-4">€ 3,703.68</span></div>
+  
+        </div>
+  
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 my-4">
+          <p class="text-warning m-0"> <i class="bi bi-info-circle-fill"></i> The current amount is the net amount without taxes</p>
+          <h6 class="fs-4">Subtotal: € 7,377.24</h6>
+        </div>
+        <a href="checkout.html" class="btn btn-primary checkout-button-link"><i class="bi bi-cart me-2"></i> Checkout</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="smeg-footer text-white">
+    <div class="smeg-container">
+      <div class="d-flex gap-4 justify-content-between flex-wrap flex-column flex-md-row">
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Products</span>
+          <a class="text-secondary" href="#">Refrigerators</a>
+          <a class="text-secondary" href="#">Freezers</a>
+          <a class="text-secondary" href="#">Wine Cellars</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Company</span>
+          <a class="text-secondary" href="#">About us</a>
+          <a class="text-secondary" href="#">Career</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Resources</span>
+          <a class="text-secondary" href="#">News</a>
+          <a class="text-secondary" href="#">Shipping</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Contact</span>
+          <a class="text-secondary" href="#">Contact us</a>
+          <a class="text-secondary" href="#">Locations</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Social</span>
+          <a class="text-secondary" href="#"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+          <a class="text-secondary" href="#"><i class="bi bi-twitter me-2"></i>X (Twitter)</a>
+          <a class="text-secondary" href="#"><i class="bi bi-instagram me-2"></i>Instagram</a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mt-5 flex-wrap flex-column flex-md-row gap-4">
+        <img width="160" height="20" src="assets/images/logo-white.svg" alt="smeg" class="img-fluid">
+        <div class="d-flex gap-4 align-items-start align-items-md-center flex-column flex-md-row">
+          <a class="text-secondary" href="">Imprint</a>
+          <a class="text-secondary" href="">Terms of Use</a>
+          <a class="text-secondary" href="">Privacy Policy</a>
+        </div>
+        <p class="m-0">© 2025 smeg Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

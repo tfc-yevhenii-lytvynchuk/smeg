@@ -1,0 +1,66 @@
+.smeg-range-slider {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.smeg-range-slider.dragging {
+  cursor: ew-resize;
+}
+
+.smeg-range-slider > input {
+  outline: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  background: #FFF;
+  min-width: 64px;
+  height: 32px;
+}
+
+.smeg-range-slider .smeg-range-slider-range {
+  width: 100%;
+  display: grid;
+  position: relative;
+  z-index: 5;
+}
+
+.smeg-range-slider .smeg-range-slider-range input {
+  grid-row: 2;
+  grid-column: 1;
+  pointer-events: none;
+  appearance: none;
+  background: transparent;
+}
+
+.smeg-range-slider .smeg-range-slider-range input::-webkit-slider-thumb {
+  pointer-events: auto;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.smeg-range-slider-slider {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.smeg-range-slider-slider-progress {
+  position: absolute;
+  height: 100%;
+  background: var(--primary-color);
+  cursor: ew-resize;
+}

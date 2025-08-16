@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Products - SMEG B2B Portal</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/fonts/smeg-fonts.css">
+
+  <style>
+    .features-form {
+      max-width: 270px; 
+      min-width: 186px;
+    }
+    .table>:not(caption)>*>* {
+      padding: 16px;
+    }
+    .table-header-product-info {
+      max-width: 212px;
+    }
+    .table-header-row th {
+      border-bottom: none;
+    }
+
+    /*IMPORTANT TABBABLE TABLE CONTENT STYLES*/
+    .tab-content>tbody.tab-pane {
+      display: none;
+    }
+    .tab-content>tbody.tab-pane.active {
+      display: table-row-group;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid smeg-container">
+        <a href="#" class="me-4">
+          <img class="smeg-header-logo" src="assets/images/logo.svg" alt="SMEG">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto gap-3 nav-underline">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link">MAIN</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
+              <div class="dropdown-menu">
+                <div class="smeg-nav-dropdown-menu-content py-3">
+                  <div class="smeg-container d-flex flex-wrap gap-5">
+                    <!-- CATEGORIES TABS TRIGGERS -->
+                    <div class="d-flex flex-column" role="tablist">
+                      <div class="d-flex flex-column">
+                        <!--  Fridge-freezers  -->
+                        <a class="nav-link active" data-bs-toggle="tab"  data-bs-target="#fridge-freezers-subcategories" role="button" aria-selected="true">
+                          <div class="d-flex align-items-center gap-3 text-nowrap ">
+                            <span class="fw-bold">Fridge-freezers</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Side-by-Side Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#side-by-side-fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Side-by-Side Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Wine Cellars -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#wine-cellars-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Wine Cellars</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+  
+                      </div>
+                    </div>
+                      <!-- SUBCATEGORIES TABS -->
+                    <div class="tab-content">
+                      <!-- Fridge-freezers subcategories -->
+                      <div id="fridge-freezers-subcategories" class="tab-pane fade show active" role="tabpanel" aria-labelledby="fridge-freezers-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Freestanding fridge-freezers</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fully integrated fridge-freezers</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Fridges subcategories -->
+                      <div id="fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Side-by-Side Fridges -->
+                      <div id="side-by-side-fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="side-by-side-fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Wine Cellars -->
+                      <div id="wine-cellars-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="wine-cellars-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars B</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">RESOURCES</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">CONTACT</a>
+            </li>
+          </ul>
+          <form id="nav-search-form" class="nav-search-form d-flex" role="search">
+            <input class="form-control me-2" id="nav-search-input" name="nav-search-input" type="search" placeholder="Search" aria-label="Search" autocomplete="on"/>
+            <button type="submit"><i class="bi bi-search me-2"></i></button>
+          </form>
+          <div class="d-flex gap-3 flex-column flex-lg-row">
+            <a><i class="bi bi-heart"></i> <span class="d-lg-none">Favorites</span></a> 
+            <a href="compare-products.html" class="text-primary">
+              <i class="bi bi-back"></i>
+              <span class="d-lg-none">Compare Products</span>
+            </a>
+            <a><i class="bi bi-person"></i> <span class="d-lg-none">Profile</span> </a>
+            <a href="cart.html"><i class="bi bi-cart"></i> <span class="d-lg-none">Cart</span> </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="smeg-breadcrumb">
+    <nav class="smeg-container" aria-label="breadcrumb">
+      <ol class="breadcrumb py-1 py-lg-2 m-0">
+        <li class="breadcrumb-item" aria-current="page"><a href="home.html"><i class="bi bi-house"></i> Main</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Compare</li>
+      </ol>
+    </nav>
+  </div>
+
+  <main>
+    <section class="smeg-section mb-4">
+      <div class="smeg-container">
+        <h1 class="mb-4 display-5">Your product comparison</h1>
+        <div class="table-responsive">
+          <table class="table tab-content">
+            <thead>
+              <tr class="align-top table-header-row">
+                <th scope="col">
+                  <form class="features-form d-flex flex-column">
+                    <p>Products in list: 6</p>
+                    <label for="compare-features">Features</label>
+                    <select class="form-select" aria-label="Features" id="compare-features" name="compare-features">
+                      <option value="all">All</option>
+                      <option value="features">Features</option>
+                      <option value="price">Price</option>
+                      <option value="rating">Rating</option>
+                      <option value="reviews">Reviews</option>
+                      <option value="warranty">Warranty</option>
+                      <option value="shipping">Shipping</option>
+                    </select>
+                    <div class="d-flex align-items-center gap-2 mt-3">
+                      <input class="form-check-input" type="checkbox" value="" id="compare-features-highlight">
+                      <label class="fw-normal" for="compare-features-highlight">
+                        Highlight different features
+                      </label>
+                    </div>
+                  </form>
+                </th>
+                <th scope="col">
+                  <div class="table-header-product-info d-flex flex-column gap-2 text-nowrap">
+                    <img class="object-fit-contain" width="auto" height="140" src="assets/images/product-carousel/2.png" alt="SMEG refrigerator for comparison" loading="lazy">
+                    <span class="fw-normal text-body-secondary">RB123432324534</span>
+                    <p class="fs-4">KGNsf 57Va03</p>
+                    <img width="44" src="assets/images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++" loading="lazy">
+                    <span class="fs-4">1,249.00 EUR</span>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-heart text-primary"></i>
+                      Add to favorites
+                    </a>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-trash text-danger"></i>
+                      delete
+                    </a>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div class="table-header-product-info d-flex flex-column gap-2 text-nowrap">
+                    <img class="object-fit-contain" width="auto" height="140" src="assets/images/product-carousel/3.png" alt="SMEG refrigerator for comparison" loading="lazy">
+                    <span class="fw-normal text-body-secondary">RB123432324534</span>
+                    <p class="fs-4">RC 1400 Pure</p>
+                    <img width="44" src="assets/images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++" loading="lazy">
+                    <span class="fs-4">1,249.00 EUR</span>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-heart text-primary"></i>
+                      Add to favorites
+                    </a>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-trash text-danger"></i>
+                      delete
+                    </a>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div class="table-header-product-info d-flex flex-column gap-2 text-nowrap">
+                    <img class="object-fit-contain" width="auto" height="140" src="assets/images/product-carousel/4.png" alt="SMEG refrigerator for comparison" loading="lazy">
+                    <span class="fw-normal text-body-secondary">RB123432324534</span>
+                    <p class="fs-4 text-wrap">SWNstd 529i Peak NoFrost</p>
+                    <img width="44" src="assets/images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++" loading="lazy">
+                    <span class="fs-4">1,249.00 EUR</span>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-heart text-primary"></i>
+                      Add to favorites
+                    </a>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-trash text-danger"></i>
+                      delete
+                    </a>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div class="table-header-product-info d-flex flex-column gap-2 text-nowrap">
+                    <img class="object-fit-contain" width="auto" height="140" src="assets/images/product-carousel/5.png" alt="SMEG refrigerator for comparison" loading="lazy">
+                    <span class="fw-normal text-body-secondary">RB123432324534</span>
+                    <p class="fs-4">KGNsf 57Va03</p>
+                    <img width="44" src="assets/images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++" loading="lazy">
+                    <span class="fs-4">1,249.00 EUR</span>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-heart text-primary"></i>
+                      Add to favorites
+                    </a>
+                    <a href="" class="text-uppercase fw-bold fs-7 d-flex align-items-center gap-2">
+                      <i class="bi bi-trash text-danger"></i>
+                      delete
+                    </a>
+                  </div>
+                </th>
+              </tr>
+              <!-- TABBABLE CONTENT NAVIGATION TABLE HEADER ROW -->
+              <tr class="table-header-row">
+                <th colspan="100%" >
+                  <ul class="nav nav-tabs m-0" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#products-highlight-tab" role="button" aria-selected="true">PRODUCTS HIGHLIGHT</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#product-details-tab" role="button" aria-selected="false">TECHNICAL DATA</a>
+                    </li>
+                  </ul>
+                </th>
+              </tr>
+            </thead>
+            <!-- USE <tbody> TAG ONLY FOR TABBABLE CONTENT -->
+            <tbody class="tab-pane fade show active" id="products-highlight-tab" role="tabpanel" aria-labelledby="products-highlight-tab">
+              <tr>
+                <th scope="row">Exterior dimensions: height/width/depth</th>
+                <td>185.5 / 59.7 / 67.5 cm</td>
+                <td>85 / 55 / 60.7 cm</td>
+                <td>185.5 / 59.7 / 67.5 cm</td>
+                <td>185.5 / 59.7 / 67.5 cm</td>
+              </tr>
+              <tr>
+                <th scope="row">Total volume</th>
+                <td>382 l</td>
+                <td>382 l</td>
+                <td>125 l</td>
+                <td>303 l</td>
+              </tr>
+              <tr>
+                <th scope="row">Noise level</th>
+                <td>34 dB</td>
+                <td>34 dB</td>
+                <td>34</td>
+                <td>34</td>
+              </tr>
+              <tr>
+                <th scope="row">Connectivity solution</th>
+                <td>retrofittable</td>
+                <td>-</td>
+                <td>integrated, fixed</td>
+                <td>wifi, bluetooth</td>
+              </tr>
+              <tr>
+                <th scope="row">Power consumption</th>
+                <td>150 kWh/year</td>
+                <td>89 kWh/year</td>
+                <td>142 kWh/year</td>
+                <td>158 kWh/year</td>
+              </tr>
+              <tr>
+                <th scope="row">Operating temperature</th>
+                <td>+10°C to +43°C</td>
+                <td>+10°C to +43°C</td>
+                <td>+16°C to +35°C</td>
+                <td>+10°C to +43°C</td>
+              </tr>
+              <tr>
+                <th scope="row">Warranty period</th>
+                <td>2 years</td>
+                <td>2 years</td>
+                <td>3 years</td>
+                <td>2 years</td>
+              </tr>
+              <tr>
+                <th scope="row">Weight</th>
+                <td>78 kg</td>
+                <td>42 kg</td>
+                <td>65 kg</td>
+                <td>72 kg</td>
+              </tr>
+              <tr>
+                <th scope="row">Specifications</th>
+                <td>NoFrost, LED lighting</td>
+                <td>Manual defrost, Halogen lighting</td>
+                <td>NoFrost, LED lighting, Wine zones</td>
+                <td>NoFrost, LED lighting, Ice maker</td>
+              </tr>
+              <tr>
+                <th scope="row">Material</th>
+                <td>Stainless steel</td>
+                <td>White plastic</td>
+                <td>Black stainless steel</td>
+                <td>Stainless steel</td>
+              </tr>
+              <tr>
+                <th scope="row">Operating voltage</th>
+                <td>220-240V</td>
+                <td>220-240V</td>
+                <td>220-240V</td>
+                <td>220-240V</td>
+              </tr>
+              <tr>
+                <th scope="row">User interface</th>
+                <td>Touch display</td>
+                <td>Mechanical controls</td>
+                <td>Digital display</td>
+                <td>Touch display</td>
+              </tr>
+              <tr>
+                <th scope="row">Color options</th>
+                <td>Stainless steel, Black</td>
+                <td>White only</td>
+                <td>Black, Silver</td>
+                <td>Stainless steel, White</td>
+              </tr>
+              <tr>
+                <th scope="row">Lifecycle support</th>
+                <td>10 years</td>
+                <td>8 years</td>
+                <td>12 years</td>
+                <td>10 years</td>
+              </tr>
+              <tr>
+                <th scope="row">Safety certifications</th>
+                <td>CE, RoHS</td>
+                <td>CE</td>
+                <td>CE, RoHS, Energy Star</td>
+                <td>CE, RoHS</td>
+              </tr>
+            </tbody>
+            <!-- USE <tbody> TAG ONLY FOR TABBABLE CONTENT -->
+            <tbody class="tab-pane fade" id="product-details-tab" role="tabpanel" aria-labelledby="product-details-tab">
+              <tr>
+                <th scope="row">PRODUCT DETAILS PROPERTY 1</th>
+                <td>TEST</td>
+                <td>TEST</td>
+                <td>TEST</td>
+                <td>TEST</td>
+              </tr>
+              <tr>
+                <th scope="row">PRODUCT DETAILS PROPERTY 2</th>
+                <td>TEST</td>
+                <td>TEST</td>
+                <td>TEST</td>
+                <td>TEST</td>
+              </tr>
+            </tbody>
+  
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="smeg-footer text-white">
+    <div class="smeg-container">
+      <div class="d-flex gap-4 justify-content-between flex-wrap flex-column flex-md-row">
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Products</span>
+          <a class="text-secondary" href="#">Refrigerators</a>
+          <a class="text-secondary" href="#">Freezers</a>
+          <a class="text-secondary" href="#">Wine Cellars</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Company</span>
+          <a class="text-secondary" href="#">About us</a>
+          <a class="text-secondary" href="#">Career</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Resources</span>
+          <a class="text-secondary" href="#">News</a>
+          <a class="text-secondary" href="#">Shipping</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Contact</span>
+          <a class="text-secondary" href="#">Contact us</a>
+          <a class="text-secondary" href="#">Locations</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Social</span>
+          <a class="text-secondary" href="#"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+          <a class="text-secondary" href="#"><i class="bi bi-twitter me-2"></i>X (Twitter)</a>
+          <a class="text-secondary" href="#"><i class="bi bi-instagram me-2"></i>Instagram</a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mt-5 flex-wrap flex-column flex-md-row gap-4">
+        <img width="160" height="20" src="assets/images/logo-white.svg" alt="SMEG" class="img-fluid">
+        <div class="d-flex gap-4 align-items-start align-items-md-center flex-column flex-md-row">
+          <a class="text-secondary" href="">Imprint</a>
+          <a class="text-secondary" href="">Terms of Use</a>
+          <a class="text-secondary" href="">Privacy Policy</a>
+        </div>
+        <p class="m-0">© 2025 SMEG Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Item - SMEG B2B Portal</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/fonts/smeg-fonts.css">
+
+  <style>
+    #product-item-carousel {
+      min-width: 440px;
+      width: 440px;
+    }
+    #product-item-carousel .carousel-item {
+      height: 500px;
+    }
+    @media (max-width: 992px) {
+      #product-item-carousel {
+        min-width: unset;
+        width: 100%;
+      }
+      #product-item-carousel .carousel-item {
+        height: 390px;
+      }
+    }
+    #product-item-carousel .product-item-carousel-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+    #product-item-carousel .carousel-indicators {
+      position: relative;
+      z-index: 3;
+      margin: 24px 0 0;
+      gap: 16px;
+      justify-content: start;
+      flex-wrap: wrap;
+    }
+    #product-item-carousel .carousel-indicators button {
+      width: 46px;
+      min-width: 46px;
+      height: 46px;
+      background-color: transparent;
+      border: 1px solid #BDC4CA;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-item-info {
+      font-size: 18px;
+    }
+    .additional-feature-image, .downloads-image {
+      width: 160px;
+      height: 120px;
+      object-fit: contain;
+    }
+    @media (max-width: 576px) {
+      .additional-feature-image {
+        width: 100%;
+        height: auto;
+      }
+      .downloads-image {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid smeg-container">
+        <a href="#" class="me-4">
+          <img class="smeg-header-logo" src="assets/images/logo.svg" alt="SMEG">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto gap-3 nav-underline">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link">MAIN</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
+              <div class="dropdown-menu">
+                <div class="smeg-nav-dropdown-menu-content py-3">
+                  <div class="smeg-container d-flex flex-wrap gap-5">
+                    <!-- CATEGORIES TABS TRIGGERS -->
+                    <div class="d-flex flex-column" role="tablist">
+                      <div class="d-flex flex-column">
+                        <!--  Fridge-freezers  -->
+                        <a class="nav-link active" data-bs-toggle="tab"  data-bs-target="#fridge-freezers-subcategories" role="button" aria-selected="true">
+                          <div class="d-flex align-items-center gap-3 text-nowrap ">
+                            <span class="fw-bold">Fridge-freezers</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Side-by-Side Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#side-by-side-fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Side-by-Side Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Wine Cellars -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#wine-cellars-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Wine Cellars</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+  
+                      </div>
+                    </div>
+                      <!-- SUBCATEGORIES TABS -->
+                    <div class="tab-content">
+                      <!-- Fridge-freezers subcategories -->
+                      <div id="fridge-freezers-subcategories" class="tab-pane fade show active" role="tabpanel" aria-labelledby="fridge-freezers-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Freestanding fridge-freezers</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fully integrated fridge-freezers</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Fridges subcategories -->
+                      <div id="fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Side-by-Side Fridges -->
+                      <div id="side-by-side-fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="side-by-side-fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Wine Cellars -->
+                      <div id="wine-cellars-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="wine-cellars-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars B</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">RESOURCES</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">CONTACT</a>
+            </li>
+          </ul>
+          <form id="nav-search-form" class="nav-search-form d-flex" role="search">
+            <input class="form-control me-2" id="nav-search-input" name="nav-search-input" type="search" placeholder="Search" aria-label="Search" autocomplete="on"/>
+            <button type="submit"><i class="bi bi-search me-2"></i></button>
+          </form>
+          <div class="d-flex gap-3 flex-column flex-lg-row">
+            <a><i class="bi bi-heart"></i> <span class="d-lg-none">Favorites</span></a> 
+            <a href="compare-products.html">
+              <i class="bi bi-back"></i>
+              <span class="d-lg-none">Compare Products</span>
+            </a>
+            <a><i class="bi bi-person"></i> <span class="d-lg-none">Profile</span> </a>
+            <a href="cart.html"><i class="bi bi-cart"></i> <span class="d-lg-none">Cart</span> </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="smeg-breadcrumb">
+    <nav class="smeg-container" aria-label="breadcrumb">
+      <ol class="breadcrumb py-1 py-lg-2 m-0">
+        <li class="breadcrumb-item" aria-current="page"><a href="home.html"><i class="bi bi-house"></i> Main</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="catalog.html">Product Catalog</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="">Fridge-freezers</a></li>
+        <li class="breadcrumb-item active" aria-current="page">RBbsc 528i Peak BioFresh</li>
+      </ol>
+    </nav>
+  </div>
+  <main>
+    <section class="smeg-section">
+      <div class="smeg-container">
+        <div class="d-flex gap-5 flex-column flex-lg-row">
+          <div id="product-item-carousel" class="carousel slide carousel-dark"  data-bs-theme="dark">
+            <!-- https://getbootstrap.com/docs/5.3/components/carousel -->
+  
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/1.png" alt="SMEG refrigerator view 1" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/2.png" alt="SMEG refrigerator view 2" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/3.png" alt="SMEG refrigerator view 3" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/4.png" alt="SMEG refrigerator view 4" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/5.png" alt="SMEG refrigerator view 5" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/6.png" alt="SMEG refrigerator view 6" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/7.png" alt="SMEG refrigerator view 7" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/8.png" alt="SMEG refrigerator view 8" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/9.png" alt="SMEG refrigerator view 9" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-item-carousel-image">
+                  <img class="h-100" src="assets/images/product-carousel/10.png" alt="SMEG refrigerator view 10" loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                <img class="h-100" src="assets/images/product-carousel/1.png" alt="SMEG refrigerator view 1" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="1" aria-label="Slide 2">
+                <img class="h-100" src="assets/images/product-carousel/2.png" alt="SMEG refrigerator view 2" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="2" aria-label="Slide 3">
+                <img class="h-100" src="assets/images/product-carousel/3.png" alt="SMEG refrigerator view 3" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="3" aria-label="Slide 4">
+                <img class="h-100" src="assets/images/product-carousel/4.png" alt="SMEG refrigerator view 4" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="4" aria-label="Slide 5">
+                <img class="h-100" src="assets/images/product-carousel/5.png" alt="SMEG refrigerator view 5" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="5" aria-label="Slide 6">
+                <img class="h-100" src="assets/images/product-carousel/6.png" alt="SMEG refrigerator view 6" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="6" aria-label="Slide 7">
+                <img class="h-100" src="assets/images/product-carousel/7.png" alt="SMEG refrigerator view 7" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="7" aria-label="Slide 8">
+                <img class="h-100" src="assets/images/product-carousel/8.png" alt="SMEG refrigerator view 8" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="8" aria-label="Slide 9">
+                <img class="h-100" src="assets/images/product-carousel/9.png" alt="SMEG refrigerator view 9" loading="lazy">
+              </button>
+              <button type="button" data-bs-target="#product-item-carousel" data-bs-slide-to="9" aria-label="Slide 10">
+                <img class="h-100" src="assets/images/product-carousel/10.png" alt="SMEG refrigerator view 10" loading="lazy">
+              </button>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#product-item-carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#product-item-carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+  
+          <div class="product-item-info d-flex flex-column flex-grow-1">
+            <h1 class="display-5">KGNsf 57Va03</h1>
+            <p><span class="fw-bold">Product ID:</span> RB123432324534</p>
+            <p>Fridge-freezer combination with EasyFresh and NoFrost</p>
+            <p class="row g-0">
+              <span class="col fw-bold">Exterior dimensions: height/width/depth</span>
+              <span class="col-4">201.5 / 59.7 / 67.5 cm</span>
+            </p>
+            <p class="row g-0">
+              <span class="col fw-bold">Total Volume</span>
+              <span class="col-4">371 L</span>
+            </p>
+            <p class="row g-0">
+              <span class="col fw-bold">Noise level</span>
+              <span class="col-4">34 dB</span>
+            </p>
+            <p class="row g-0">
+              <span class="col fw-bold">Connectivity solution</span>
+              <span class="col-4">Retrofittable</span>
+            </p>
+            <div class="d-flex gap-1 mb-4">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="Energy efficient" loading="lazy">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="NoFrost technology" loading="lazy">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="EasyFresh compartment" loading="lazy">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="Premium quality" loading="lazy">
+            </div>
+            <div class="d-flex gap-3 align-items-center mb-4">
+              <img height="24" src="assets//images/energy-lables/energy-lable.svg" alt="Energy efficiency rating A+++">
+              <a class="text-uppercase fw-bold text-secondary fs-7 d-flex align-items-center gap-2" href="">pRODUCT DATASHEET <i class="bi bi-chevron-right"></i></a>
+            </div>
+            <div class="d-flex gap-5 align-items-center mb-4">
+              <span class="fw-bold fs-2">1,249.00 EUR</span>
+              <span class="text-success">
+                <i class="bi bi-check2"></i> Available
+              </span>
+            </div>
+            <div class="d-flex column-gap-5 row-gap-3 align-items-center flex-wrap">
+              <button type="submit" class="btn btn-primary px-4">ADD TO CART <i class="bi bi-arrow-right ms-2"></i></button>
+              <a href="" class="text-uppercase fw-bold text-secondary fs-7 d-flex align-items-center gap-2">
+                <i class="bi bi-heart text-primary"></i>
+                Add to favorites
+              </a>
+              <a href="" class="text-uppercase fw-bold text-secondary fs-7 d-flex align-items-center gap-2">
+                <i class="bi bi-back"></i>
+                Compare
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="smeg-section">
+      <div class="smeg-container">
+        <nav>
+          <div class="nav nav-tabs" role="tablist">
+            <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#main-features" type="button" role="tab" aria-controls="main-features" aria-selected="true">MAIN FEATURES</a>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#additional-features" type="button" role="tab" aria-controls="additional-features" aria-selected="false">ADDITIONAL FEATURES</a>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#technical-data" type="button" role="tab" aria-controls="technical-data" aria-selected="false">TECHNICAL DATA</a>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#downloads" type="button" role="tab" aria-controls="downloads" aria-selected="false">DOWNLOADS</a>
+          </div>
+        </nav>
+        <div class="tab-content p-3 p-lg-5 border">
+          <!-- Main features -->
+          <div class="tab-pane fade show active" id="main-features" role="tabpanel" tabindex="0">
+            <div class="d-flex flex-column gap-4 gap-lg-5">
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-5 order-0 order-md-1">
+                  <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                    <img class="img-fluid object-fit-contain" src="assets/images/main-features/1.png" alt="BioFresh technology keeps food fresh longer" loading="lazy">
+                  </div>
+                </div>
+                <div class="col-12 col-md-7 order-1">
+                  <h3>EasyFresh</h3>
+                  <p>Our EasyFresh safe guarantees market-freshness in your home. 
+                    Whether it's unpackaged fruit, vegetables, or other items, everything is stored optimally here. Thanks to the tight seal, the food increases the humidity in the safe, keeping the food fresh for longer.</p>
+                </div>
+              </div>
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-7 order-1">
+                  <h3>NoFrost</h3>
+                  <p>When you open your freezer, you want to see frozen food - but certainly not ice and frost. NoFrost protects the freezer compartment from unwanted icing, which consumes a lot of energy and can be expensive. NoFrost means no more tedious and time-consuming defrosting of the freezer, giving you more time for other things – and saving money.</p>
+                </div>
+                <div class="col-12 col-md-5 order-0 order-md-1">
+                  <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                    <img class="img-fluid object-fit-contain" src="assets/images/main-features/2.png" alt="NoFrost technology prevents ice buildup" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-5 order-0 order-md-1">
+                  <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                    <img class="img-fluid object-fit-contain" src="assets/images/main-features/3.png" alt="EasyFresh compartment for optimal storage" loading="lazy">
+                  </div>
+                </div>
+                <div class="col-12 col-md-7 order-1">
+                  <h3>DuoCooling</h3>
+                  <p>Thanks to two completely separate cooling circuits, DuoCooling ensures that there is no air exchange between the refrigerator and freezer compartments. Food doesn't dry out, and odors don't transfer. This means less waste, less shopping, and more savings and enjoyment.</p>
+                </div>
+              </div>
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-7 order-1">
+                  <h3>Retrofitable SmartDeviceBox</h3>
+                  <p>Want to be prepared for the future of the Smart Home? Your SMEG will be happy to help. You can retrofit it with a SmartDeviceBox which will connect your SMEG to the Internet. The SmartDeviceBox can be installed in just a few steps and will open up the whole world of digital possibilities to you today.y and can be expensive. NoFrost means no more tedious and time-consuming defrosting of the freezer, giving you more time for other things - and saving money.</p>
+                </div>
+                <div class="col-12 col-md-5 order-0 order-md-1">
+                  <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                    <img class="img-fluid object-fit-contain" src="assets/images/main-features/4.png" alt="Energy efficient operation" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-5 order-0 order-md-1">
+                  <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                    <img class="img-fluid object-fit-contain" src="assets/images/main-features/5.png" alt="Premium design and build quality" loading="lazy">
+                  </div>
+                </div>
+                <div class="col-12 col-md-7 order-1">
+                  <h3>SteelFinish</h3>
+                  <p>Do you love cool elegance in your kitchen? Then a SMEG with SteelFinish is your choice. The co-laminate material with vertical brushing is visually very similar to real stainless steel, robust, and easy to clean. The silver-painted side panels perfectly complement the elegant look.</p>
+                </div>
+              </div>
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-7 order-1">
+                  <h3>Touch display</h3>
+                  <p> Truly touching: The touch display makes operating your SMEG simple and intuitive. All functions are clearly arranged on the display. With a light touch of your finger, you can effortlessly select functions or check the current temperature of your refrigerator.</p>
+                </div>
+                <div class="col-12 col-md-5 order-0 order-md-1">
+                  <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                    <img class="img-fluid object-fit-contain" src="assets/images/main-features/6.png" alt="Advanced temperature control" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          
+          <!-- Additional features -->
+          <div class="tab-pane fade" id="additional-features" role="tabpanel" tabindex="0">
+            <div class="row g-3 g-lg-4">
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/1.png" alt="BioFresh technology keeps food fresh longer" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">Recessed Grip</h3>
+                    <p>Unique and functional: Thanks to the vertically continuous and ergonomically positioned recessed handle, you can open the appliance with ease. Additionally, the modern and puristic design allows for perfect integration into your handle-free kitchen.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/2.png" alt="NoFrost technology prevents ice buildup" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">InteriorFit</h3>
+                    <p>Complete the puristic design of your kitchen: Our refrigerators fit perfectly into a 60cm-deep niche. Only the door protrudes slightly, ensuring optimal access to the recessed handle and lever handle. This keeps the focus on your kitchen – with your SMEG as the focal point and highlight.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/3.png" alt="EasyFresh compartment for optimal storage" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">PowerCooling system</h3>
+                    <p>Do you want to be sure that your refrigerator's cooling is distributed almost evenly? The PowerCooling system ensures this: The powerful yet quiet fan efficiently distributes the cold air throughout the entire refrigerator compartment.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/4.png" alt="Energy efficient operation" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">Base concept</h3>
+                    <p>Do you want your refrigerator to be powerful and convenient – ​​but also sustainable? Then a SMEG is perfect for you. Our BluPerformance technology makes it a true all-rounder: It offers extra volume and cooling performance – yet consumes extremely little energy. And listen up: You'll hear almost nothing. Because your SMEG is extremely quiet despite its power.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/5.png" alt="Premium design and build quality" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">SuperSilent</h3>
+                    <p>Pssst – listen carefully: Your SMEG is so quiet you'll have to strain your ears to hear it. What's behind it? All refrigeration components, such as compressors, valves, fans, and evaporators, are optimized and perfectly coordinated. So you only hear what you want in your kitchen.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/7.png" alt="Smart cooling system" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">Door rack</h3>
+                    <p>Do you want a secure storage area for your drinks or food? And still want them easy to reach? Our door racks offer both. They're height-adjustable, so they adapt to your needs. The movable and removable bottle holder is also practical: This keeps your bottles safe at all times.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/8.png" alt="Flexible storage solutions" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">Height-adjustable interior door racks</h3>
+                    <p>The LED ceiling lighting illuminates the interior from above, providing a clear overview of your food. An extra bright spot: The LEDs are positioned in front of the glass shelves, ensuring even a full refrigerator is well-lit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 gap-lg-4">
+                  <img class="additional-feature-image" src="assets/images/main-features/6.png" alt="Advanced temperature control" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">LED ceiling lighting</h3>
+                    <p>The LED ceiling lighting illuminates the interior from above, providing a clear overview of your food. An extra bright spot: The LEDs are positioned in front of the glass shelves, ensuring even a full refrigerator is well-lit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Technical data -->
+          <div class="tab-pane fade" id="technical-data" role="tabpanel" tabindex="0">
+            <div class="nav nav-tabs" role="tablist">
+              <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#general-technical-data" type="button" role="tab" aria-controls="general-technical-data" aria-selected="true">GENERAL PRODUCT INFORMATION</a>
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#output-and-consumption-technical-data" type="button" role="tab" aria-controls="output-and-consumption-technical-data" aria-selected="false">OUTPUT AND CONSUMPTION</a>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="general-technical-data" role="tabpanel" aria-labelledby="general-technical-data" tabindex="0">
+                <div class="row g-0 py-3 border-top">
+                  <div class="col-12 col-md-6">
+                    <span class="fw-bold">Model type</span>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <span>Fridge-freezer combination with EasyFresh and NoFrost</span>
+                  </div>
+                </div>
+                <div class="row g-0 py-3 border-top">
+                  <div class="col-12 col-md-6">
+                    <span class="fw-bold">GTIN</span>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <span>4016803150596</span>
+                  </div>
+                </div>
+                <div class="row g-0 py-3 border-top">
+                  <div class="col-12 col-md-6">
+                    <span class="fw-bold">Series</span>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <span>Pure</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="output-and-consumption-technical-data" role="tabpanel" aria-labelledby="output-and-consumption-technical-data" tabindex="0">
+                <div class="row g-0 py-3 border-top">
+                  <div class="col-12 col-md-6">
+                    <span class="fw-bold">EXAMPLE PROPERTY</span>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <span>example property value</span>
+                  </div>
+                </div>
+                <div class="row g-0 py-3 border-top">
+                  <div class="col-12 col-md-6">
+                    <span class="fw-bold">EXAMPLE PROPERTY</span>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <span>example property value</span>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+  
+          <!-- Downloads -->
+          <div class="tab-pane fade" id="downloads" role="tabpanel"  tabindex="0">
+            <div class="row g-3 g-lg-4">
+              <div class="col-12 col-lg-6">
+                <div class="d-flex gap-3 gap-lg-4">
+                  <img class="downloads-image" src="assets/images/main-features/9.png" alt="Product specification sheet" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">Operating instructions</h3>
+                    <a href="" class="text-decoration-underline text-body-secondary fw-bold">DOWNLOAD <i class="bi bi-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex gap-3 gap-lg-4">
+                  <img class="downloads-image" src="assets/images/main-features/10.png" alt="Installation guide" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">Assembly and installation instructions</h3>
+                    <a href="" class="text-decoration-underline text-body-secondary fw-bold">DOWNLOAD <i class="bi bi-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex gap-3 gap-lg-4">
+                  <img class="downloads-image" src="assets/images/main-features/11.png" alt="User manual" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">Dimensional drawing</h3>
+                    <a href="" class="text-decoration-underline text-body-secondary fw-bold">DOWNLOAD <i class="bi bi-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex gap-3 gap-lg-4">
+                  <img class="downloads-image" src="assets/images/main-features/11.png" alt="User manual" loading="lazy">
+                  <div>
+                    <h3 class="fs-4">CE-Certificate</h3>
+                    <a href="" class="text-decoration-underline text-body-secondary fw-bold">DOWNLOAD <i class="bi bi-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="smeg-section mb-5">
+      <div class="smeg-container">
+        <h2 class="mb-4 display-6">Similar devicess</h2>
+  
+        <div class="d-flex gap-3 mt-3 w-100 overflow-x-auto pb-2">
+          <div class="smeg-product-card">
+            <form action="" method="" class="position-absolute top-0 end-0 me-4 mt-4">
+              <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+              <input type="hidden" name="productId" value="000000">
+              <button type="submit">
+                <i class="bi bi-heart text-primary"></i>
+              </button>
+            </form>
+            <div class="d-flex justify-content-center mb-2">
+              <img class="smeg-product-card-image" src="https://media3.bsh-group.com/Product_Shots/300x300/20998523_KB7962FE0_STP_def.jpg" alt="SMEG KGNsf 57Va03 fridge-freezer combination" loading="lazy">
+            </div>
+            <span class="fs-4">KGNsf 57Va03</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatum quibusdam nulla placeat sit, earum voluptatibus, pturi ratione corporis?</p>
+            <span class="fw-bold">Exterior dimensions: height/width/depth</span>
+            <span>201.5 / 59.7 / 67.5 cm</span>
+            <span class="my-2"><span class="fw-bold">Total Volume</span> 371 L</span>
+            <div class="d-flex gap-1 mb-2">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="Energy efficient" loading="lazy">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="NoFrost technology" loading="lazy">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="EasyFresh compartment" loading="lazy">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="Premium quality" loading="lazy">
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fs-4">1,249.00 EUR</span>
+              <span class="text-warning fs-7">
+                <i class="bi bi-truck"></i> Delivery 3-4 weeks
+              </span>
+            </div>
+            <div class="d-flex gap-2 mt-2 flex-wrap">
+              <form class="flex-grow-1" action="" method="">
+                <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+                <input type="hidden" name="productId" value="00000">
+                <button disabled class="btn btn-primary w-100">ADD TO CART <i class="bi bi-arrow-right ms-2"></i></button>
+              </form>
+              <a class="btn btn-outline-primary flex-grow-1">DETAILS <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+          <div class="smeg-product-card">
+            <form action="" method="" class="position-absolute top-0 end-0 me-4 mt-4">
+              <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+              <input type="hidden" name="productId" value="000000">
+              <button type="submit">
+                <i class="bi bi-heart-fill text-primary"></i>
+              </button>
+            </form>
+            <div class="d-flex justify-content-center mb-2">
+              <img class="smeg-product-card-image" src="https://media3.bsh-group.com/Product_Shots/3000x3000/21135119_KI7966FD0_STP_def.jpg" alt="">
+            </div>
+            <span class="fs-4">KGNsf 57Va03</span>
+            <p>Fridge-freezer combination with EasyFresh and NoFrost</p>
+            <span class="fw-bold">Exterior dimensions: height/width/depth</span>
+            <span>201.5 / 59.7 / 67.5 cm</span>
+            <span class="my-2"><span class="fw-bold">Total Volume</span> 371 L</span>
+            <div class="d-flex gap-1 mb-2">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fs-4">1,249.00 EUR</span>
+              <span class="text-success fs-7">
+                <i class="bi bi-check2"></i> Available
+              </span>
+            </div>
+            <div class="d-flex gap-2 mt-2 flex-wrap">
+              <form class="flex-grow-1" action="" method="">
+                <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+                <input type="hidden" name="productId" value="00000">
+                <button type="submit" class="btn btn-primary w-100">ADD TO CART <i class="bi bi-arrow-right ms-2"></i></button>
+              </form>
+              <a class="btn btn-outline-primary flex-grow-1">DETAILS <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+          <div class="smeg-product-card">
+            <form action="" method="" class="position-absolute top-0 end-0 me-4 mt-4">
+              <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+              <input type="hidden" name="productId" value="000000">
+              <button type="submit">
+                <i class="bi bi-heart-fill text-primary"></i>
+              </button>
+            </form>
+            <div class="d-flex justify-content-center mb-2">
+              <img class="smeg-product-card-image" src="https://media3.bsh-group.com/Product_Shots/3000x3000/21135119_KI7966FD0_STP_def.jpg" alt="">
+            </div>
+            <span class="fs-4">KGNsf 57Va03</span>
+            <p>Fridge-freezer combination with EasyFresh and NoFrost</p>
+            <span class="fw-bold">Exterior dimensions: height/width/depth</span>
+            <span>201.5 / 59.7 / 67.5 cm</span>
+            <span class="my-2"><span class="fw-bold">Total Volume</span> 371 L</span>
+            <div class="d-flex gap-1 mb-2">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fs-4">1,249.00 EUR</span>
+              <span class="text-success fs-7">
+                <i class="bi bi-check2"></i> Available
+              </span>
+            </div>
+            <div class="d-flex gap-2 mt-2 flex-wrap">
+              <form class="flex-grow-1" action="" method="">
+                <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+                <input type="hidden" name="productId" value="00000">
+                <button type="submit" class="btn btn-primary w-100">ADD TO CART <i class="bi bi-arrow-right ms-2"></i></button>
+              </form>
+              <a class="btn btn-outline-primary flex-grow-1">DETAILS <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+          <div class="smeg-product-card">
+            <form action="" method="" class="position-absolute top-0 end-0 me-4 mt-4">
+              <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+              <input type="hidden" name="productId" value="000000">
+              <button type="submit">
+                <i class="bi bi-heart-fill text-primary"></i>
+              </button>
+            </form>
+            <div class="d-flex justify-content-center mb-2">
+              <img class="smeg-product-card-image" src="https://media3.bsh-group.com/Product_Shots/3000x3000/21135119_KI7966FD0_STP_def.jpg" alt="">
+            </div>
+            <span class="fs-4">KGNsf 57Va03</span>
+            <p>Fridge-freezer combination with EasyFresh and NoFrost</p>
+            <span class="fw-bold">Exterior dimensions: height/width/depth</span>
+            <span>201.5 / 59.7 / 67.5 cm</span>
+            <span class="my-2"><span class="fw-bold">Total Volume</span> 371 L</span>
+            <div class="d-flex gap-1 mb-2">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fs-4">1,249.00 EUR</span>
+              <span class="text-success fs-7">
+                <i class="bi bi-check2"></i> Available
+              </span>
+            </div>
+            <div class="d-flex gap-2 mt-2 flex-wrap">
+              <form class="flex-grow-1" action="" method="">
+                <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+                <input type="hidden" name="productId" value="00000">
+                <button type="submit" class="btn btn-primary w-100">ADD TO CART <i class="bi bi-arrow-right ms-2"></i></button>
+              </form>
+              <a class="btn btn-outline-primary flex-grow-1">DETAILS <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+          <div class="smeg-product-card">
+            <form action="" method="" class="position-absolute top-0 end-0 me-4 mt-4">
+              <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+              <input type="hidden" name="productId" value="000000">
+              <button type="submit">
+                <i class="bi bi-heart-fill text-primary"></i>
+              </button>
+            </form>
+            <div class="d-flex justify-content-center mb-2">
+              <img class="smeg-product-card-image" src="https://media3.bsh-group.com/Product_Shots/3000x3000/21135119_KI7966FD0_STP_def.jpg" alt="">
+            </div>
+            <span class="fs-4">KGNsf 57Va03</span>
+            <p>Fridge-freezer combination with EasyFresh and NoFrost</p>
+            <span class="fw-bold">Exterior dimensions: height/width/depth</span>
+            <span>201.5 / 59.7 / 67.5 cm</span>
+            <span class="my-2"><span class="fw-bold">Total Volume</span> 371 L</span>
+            <div class="d-flex gap-1 mb-2">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+              <img width="40" height="40" src="assets/images/features/1.png" alt="feature">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fs-4">1,249.00 EUR</span>
+              <span class="text-success fs-7">
+                <i class="bi bi-check2"></i> Available
+              </span>
+            </div>
+            <div class="d-flex gap-2 mt-2 flex-wrap">
+              <form class="flex-grow-1" action="" method="">
+                <!-- PLACEHOLDER FORM PLESE IMPLEMENT -->
+                <input type="hidden" name="productId" value="00000">
+                <button type="submit" class="btn btn-primary w-100">ADD TO CART <i class="bi bi-arrow-right ms-2"></i></button>
+              </form>
+              <a class="btn btn-outline-primary flex-grow-1">DETAILS <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="smeg-footer text-white">
+    <div class="smeg-container">
+      <div class="d-flex gap-4 justify-content-between flex-wrap flex-column flex-md-row">
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Products</span>
+          <a class="text-secondary" href="#">Refrigerators</a>
+          <a class="text-secondary" href="#">Freezers</a>
+          <a class="text-secondary" href="#">Wine Cellars</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Company</span>
+          <a class="text-secondary" href="#">About us</a>
+          <a class="text-secondary" href="#">Career</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Resources</span>
+          <a class="text-secondary" href="#">News</a>
+          <a class="text-secondary" href="#">Shipping</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Contact</span>
+          <a class="text-secondary" href="#">Contact us</a>
+          <a class="text-secondary" href="#">Locations</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Social</span>
+          <a class="text-secondary" href="#"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+          <a class="text-secondary" href="#"><i class="bi bi-twitter me-2"></i>X (Twitter)</a>
+          <a class="text-secondary" href="#"><i class="bi bi-instagram me-2"></i>Instagram</a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mt-5 flex-wrap flex-column flex-md-row gap-4">
+        <img width="160" height="20" src="assets/images/logo-white.svg" alt="SMEG" class="img-fluid">
+        <div class="d-flex gap-4 align-items-start align-items-md-center flex-column flex-md-row">
+          <a class="text-secondary" href="">Imprint</a>
+          <a class="text-secondary" href="">Terms of Use</a>
+          <a class="text-secondary" href="">Privacy Policy</a>
+        </div>
+        <p class="m-0">© 2025 SMEG Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

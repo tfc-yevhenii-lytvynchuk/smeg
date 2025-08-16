@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - SMEG B2B Portal</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/fonts/smeg-fonts.css">
+
+  <style>
+
+    .account-info-placeholder {
+      background-color: #F0F3F6;
+      min-height: 230px;
+    }
+    .address-card {
+      padding: 24px;
+      background: #F0F3F6;
+    }
+    .checkout-summary {
+      background-color: #F0F3F6;
+      padding: 8px 16px 24px;
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid smeg-container">
+        <a href="#" class="me-4">
+          <img class="smeg-header-logo" src="assets/images/logo.svg" alt="SMEG">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto gap-3 nav-underline">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link">MAIN</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">PRODUCTS</a>
+              <div class="dropdown-menu">
+                <div class="smeg-nav-dropdown-menu-content py-3">
+                  <div class="smeg-container d-flex flex-wrap gap-5">
+                    <!-- CATEGORIES TABS TRIGGERS -->
+                    <div class="d-flex flex-column" role="tablist">
+                      <div class="d-flex flex-column">
+                        <!--  Fridge-freezers  -->
+                        <a class="nav-link active" data-bs-toggle="tab"  data-bs-target="#fridge-freezers-subcategories" role="button" aria-selected="true">
+                          <div class="d-flex align-items-center gap-3 text-nowrap ">
+                            <span class="fw-bold">Fridge-freezers</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Side-by-Side Fridges -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#side-by-side-fridges-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Side-by-Side Fridges</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+                        <!-- Wine Cellars -->
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#wine-cellars-subcategories" role="button" aria-selected="false">
+                          <div class="d-flex align-items-center gap-3 text-nowrap">
+                            <span class="fw-bold">Wine Cellars</span>
+                            <i class="bi bi-chevron-right text-primary fs-5"></i>
+                          </div>
+                        </a>
+  
+                      </div>
+                    </div>
+                      <!-- SUBCATEGORIES TABS -->
+                    <div class="tab-content">
+                      <!-- Fridge-freezers subcategories -->
+                      <div id="fridge-freezers-subcategories" class="tab-pane fade show active" role="tabpanel" aria-labelledby="fridge-freezers-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Freestanding fridge-freezers</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fully integrated fridge-freezers</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Fridges subcategories -->
+                      <div id="fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Side-by-Side Fridges -->
+                      <div id="side-by-side-fridges-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="side-by-side-fridges-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Side-by-Side Fridges B</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Wine Cellars -->
+                      <div id="wine-cellars-subcategories" class="tab-pane fade" role="tabpanel" aria-labelledby="wine-cellars-category" tabindex="0">
+                        <div class="d-flex flex-column gap-3 pt-2">
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars A</span>
+                          </a>
+                          <a href="products-list.html">
+                            <span class="fw-bold">Wine Cellars B</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">RESOURCES</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">CONTACT</a>
+            </li>
+          </ul>
+          <form id="nav-search-form" class="nav-search-form d-flex" role="search">
+            <input class="form-control me-2" id="nav-search-input" name="nav-search-input" type="search" placeholder="Search" aria-label="Search" autocomplete="on"/>
+            <button type="submit"><i class="bi bi-search me-2"></i></button>
+          </form>
+          <div class="d-flex gap-3 flex-column flex-lg-row">
+            <a><i class="bi bi-heart"></i> <span class="d-lg-none">Favorites</span></a> 
+            <a href="compare-products.html">
+              <i class="bi bi-back"></i>
+              <span class="d-lg-none">Compare Products</span>
+            </a>
+            <a><i class="bi bi-person"></i> <span class="d-lg-none">Profile</span> </a>
+            <a class="text-primary" href="cart.html"><i class="bi bi-cart"></i> <span class="d-lg-none">Cart</span> </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="smeg-breadcrumb">
+    <nav class="smeg-container" aria-label="breadcrumb">
+      <ol class="breadcrumb py-1 py-lg-2 m-0">
+        <li class="breadcrumb-item" aria-current="page"><a href="home.html"><i class="bi bi-house"></i> Main</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+      </ol>
+    </nav>
+  </div>
+
+  <main>
+    <section class="smeg-section mb-4">
+      <div class="smeg-container">
+        <div class="row g-5">
+          <div class="col-12 col-lg-7">
+            <div class="d-flex justify-content-between align-items-center pb-3 border-bottom mb-3">
+              <h1 class="display-5">Checkout</h1>
+              <a href="products-list.html" class="text-uppercase fs-7 fw-bold"> <i class="bi bi-arrow-left"></i> Back to Products</a>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h3>Account Info</h3>
+              <a href="products-list.html" class="text-uppercase text-decoration-underline fs-7 fw-bold">  GO TO ACCOUNT <i class="bi bi-chevron-right"></i></a>
+            </div>
+            <div class="account-info-placeholder d-flex justify-content-center align-items-center">
+              Tradeplace Info PALCEHOLDER
+            </div>
+            <h2 class="my-4 fs-4">Shipping Address</h2>
+            <ul class="nav nav-tabs m-0 fw-bold" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#saved-addresses-tab" role="button" aria-selected="true">SAVED ADDRESSES</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#another-addresses-tab" role="button" aria-selected="false">ANOTHER ADDRESSES</a>
+              </li>
+            </ul>
+            <div class="tab-content mt-3">
+              <div id="saved-addresses-tab" class="tab-pane fade show active" role="tabpanel" aria-labelledby="saved-addresses-tab">
+                <div class="d-flex gap-3 flex-column">
+                  <form class="address-card d-flex gap-3 align-items-center">
+                    <input type="checkbox" class="form-check-input" name="saved-address1">
+                    <div class="d-flex flex-column gap-1">
+                      <h4 class="m-0 fs-5">Address 1</h4>
+                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
+                    </div>
+                  </form>
+                  <form class="address-card d-flex gap-3 align-items-center">
+                    <input type="checkbox" class="form-check-input" name="saved-address1">
+                    <div class="d-flex flex-column gap-1">
+                      <h4 class="m-0 fs-5">Address 2</h4>
+                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div id="another-addresses-tab" class="tab-pane fade" role="tabpanel" aria-labelledby="another-addresses-tab">
+                <form class="d-flex gap-3 flex-column">
+                  <div class="address-card d-flex gap-3 align-items-center">
+                    <input type="radio" class="form-check-input" name="another-address" value="address1">
+                    <div class="d-flex flex-column gap-1">
+                      <h4 class="m-0 fs-5">Address 1</h4>
+                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
+                    </div>
+                  </div>
+                  <div class="address-card d-flex gap-3 align-items-center">
+                    <input type="radio" class="form-check-input" name="another-address" value="address2">
+                    <div class="d-flex flex-column gap-1">
+                      <h4 class="m-0 fs-5">Address 2</h4>
+                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="checkout-summary d-flex flex-column">
+              <div class="d-flex gap-3 py-3 border-bottom">
+                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/1.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
+                <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
+                  <div class="d-flex flex-column gap-1">
+                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
+                    <p class="m-0 fs-8 ">YZ456789987654</p>
+                  </div>
+                  <span class="d-flex align-items-center gap-3">
+                    <span class="text-body-secondary">x1</span>
+                    <span class="fw-medium">2,249.00 EUR</span>
+                  </span>
+                </div>
+              </div>
+              <div class="d-flex gap-3 py-3 border-bottom">
+                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/2.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
+                <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
+                  <div class="d-flex flex-column gap-1">
+                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
+                    <p class="m-0 fs-8 ">YZ456789987654</p>
+                  </div>
+                  <span class="d-flex align-items-center gap-3">
+                    <span class="text-body-secondary">x2</span>
+                    <span class="fw-medium">4,498.00 EUR</span>
+                  </span>
+                </div>
+              </div>
+              <div class="d-flex gap-3 py-3 border-bottom">
+                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/3.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
+                <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
+                  <div class="d-flex flex-column gap-1">
+                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
+                    <p class="m-0 fs-8 ">YZ456789987654</p>
+                  </div>
+                  <span class="d-flex align-items-center gap-3">
+                    <span class="text-body-secondary">x2</span>
+                    <span class="fw-medium">4,498.00 EUR</span>
+                  </span>
+                </div>
+              </div>
+              <div class="d-flex gap-3 py-3 border-bottom">
+                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/4.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
+                <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
+                  <div class="d-flex flex-column gap-1">
+                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
+                    <p class="m-0 fs-8 ">YZ456789987654</p>
+                  </div>
+                  <span class="d-flex align-items-center gap-3">
+                    <span class="text-body-secondary">x2</span>
+                    <span class="fw-medium">4,498.00 EUR</span>
+                  </span>
+                </div>
+              </div>
+              <div class="d-flex gap-3 py-3 border-bottom">
+                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/5.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
+                <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
+                  <div class="d-flex flex-column gap-1">
+                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
+                    <p class="m-0 fs-8 ">YZ456789987654</p>
+                  </div>
+                  <span class="d-flex align-items-center gap-3">
+                    <span class="text-body-secondary">x2</span>
+                    <span class="fw-medium">4,498.00 EUR</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="py-4 d-flex flex-column gap-3 border-bottom">
+                <div class="d-flex justify-content-between">
+                  <span>Subtotal</span>
+                  <span class="fw-medium">11,243.00 EUR</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Shipping</span>
+                  <span class="fw-medium">10.00 EUR</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Taxes</span>
+                  <span class="fw-medium">1,253.00 EUR</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between fs-4 fw-medium mt-3">
+                <span >Total</span>
+                <span >12,496.00 EUR</span>
+              </div>
+            </div>
+            <form action="">
+              <div class="form-check d-flex gap-3 align-items-center my-3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  I have read and agree to the <a class="text-decoration-underline" href="#">Terms and Conditions</a>*
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-receipt-cutoff me-2"></i>
+                Place Order
+              </button>
+              <p class="text-warning my-3 text-center"> <i class="bi bi-info-circle-fill"></i> We will send you email with order details and payment</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="smeg-footer text-white">
+    <div class="smeg-container">
+      <div class="d-flex gap-4 justify-content-between flex-wrap flex-column flex-md-row">
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Products</span>
+          <a class="text-secondary" href="#">Refrigerators</a>
+          <a class="text-secondary" href="#">Freezers</a>
+          <a class="text-secondary" href="#">Wine Cellars</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Company</span>
+          <a class="text-secondary" href="#">About us</a>
+          <a class="text-secondary" href="#">Career</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Resources</span>
+          <a class="text-secondary" href="#">News</a>
+          <a class="text-secondary" href="#">Shipping</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Contact</span>
+          <a class="text-secondary" href="#">Contact us</a>
+          <a class="text-secondary" href="#">Locations</a>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <span class="fw-bold mb-2">Social</span>
+          <a class="text-secondary" href="#"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+          <a class="text-secondary" href="#"><i class="bi bi-twitter me-2"></i>X (Twitter)</a>
+          <a class="text-secondary" href="#"><i class="bi bi-instagram me-2"></i>Instagram</a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mt-5 flex-wrap flex-column flex-md-row gap-4">
+        <img width="160" height="20" src="assets/images/logo-white.svg" alt="SMEG" class="img-fluid">
+        <div class="d-flex gap-4 align-items-start align-items-md-center flex-column flex-md-row">
+          <a class="text-secondary" href="">Imprint</a>
+          <a class="text-secondary" href="">Terms of Use</a>
+          <a class="text-secondary" href="">Privacy Policy</a>
+        </div>
+        <p class="m-0">© 2025 SMEG Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
