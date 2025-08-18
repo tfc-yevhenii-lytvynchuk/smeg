@@ -3,3 +3,8 @@
   src: url(Raleway.ttf) format("truetype");
   font-display: swap
 }
+@font-face {
+  font-family: Mulish;
+  src: url(Mulish.ttf) format("truetype");
+  font-display: swap
+}

@@ -466,4 +466,7 @@ body .breadcrumb-item+.breadcrumb-item::before {
 .smeg-paginator .smeg-paginator .page-link .active>.page-link, .page-link {
   cursor: pointer;
 }
+.product-item-info,.smeg-product-card,.products-list-container,.table-header-product-info,.smeg-cart-container,.checkout-summary {
+  font-family: Mulish;
+}
 /*  GLOBAL STYLES */
