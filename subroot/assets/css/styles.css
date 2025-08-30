@@ -238,9 +238,11 @@ body .btn {
 }
 body .btn-primary {
   background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 body .btn-primary:hover {
-  background-color: #003057;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 body .btn-primary:active {
   background-color: #003057;
@@ -282,7 +284,6 @@ h1,h2,h3,h4,h5,h6 {
 .smeg-product-card {
   width: 374px;
   min-width: 374px;
-  border: 1px solid #BDC4CA;
   background: #FFF;
   position: relative;
   display: flex;
@@ -307,7 +308,7 @@ h1,h2,h3,h4,h5,h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   max-height: 290px;
 }
 .smeg-product-category-card-image img {
@@ -334,13 +335,21 @@ body .nav.nav-tabs {
   border: none;
   gap: 16px;
   margin-bottom: 16px;
+  background-color: #E3E3E3;
+  padding: 0 16px 20px 16px;
+  font-weight: 700;
 }
 body .nav.nav-tabs .nav-link {
   border: none;
   padding:0;
+  padding-top: 20px;
+  border-top: 2px solid transparent;
+  border-radius: 0;
+
 }
 body .nav-tabs .nav-link.active {
-  border-bottom: 2px solid var(--primary-color);
+  border-top: 2px solid var(--primary-color);
+  background-color: transparent;
 }
 
 /* header dropdown styles */
@@ -451,6 +460,9 @@ body .form-check-input {
   border-bottom: 1px solid white;
   display: inline-block;
 }
+.button-aesthetics.black {
+  border-bottom-color: black;
+}
 body .breadcrumb-item.active {
   color: white;
 }
@@ -468,5 +480,9 @@ body .breadcrumb-item+.breadcrumb-item::before {
 }
 .product-item-info,.smeg-product-card,.products-list-container,.table-header-product-info,.smeg-cart-container,.checkout-summary {
   font-family: Mulish;
+}
+.text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /*  GLOBAL STYLES */
