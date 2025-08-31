@@ -11,17 +11,19 @@
 
   <style>
 
-    .account-info-placeholder {
-      background-color: #F0F3F6;
-      min-height: 230px;
+    .account-info {
+      background-color: #F8F8F8;
     }
     .address-card {
       padding: 24px;
-      background: #F0F3F6;
+      background: #F8F8F8;
     }
     .checkout-summary {
-      background-color: #F0F3F6;
+      background-color: #F8F8F8;
       padding: 8px 16px 24px;
+    }
+    .checkout-main {
+     font-family: Mulish;
     }
   </style>
 </head>
@@ -29,7 +31,7 @@
   <header class="sticky-top text-white">
     <nav class="navbar navbar-expand-lg bg-black">
       <div class="container-fluid smeg-container">
-        <a href="#" class="me-4">
+        <a href="home.html" class="me-4">
           <img class="smeg-header-logo" src="assets/images/logo.svg" alt="SMEG">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -166,23 +168,98 @@
     </nav>
   </div>
 
-  <main>
+  <main class="checkout-main">
     <section class="smeg-section mb-4">
       <div class="smeg-container">
         <div class="row g-5">
           <div class="col-12 col-lg-7">
             <div class="d-flex justify-content-between align-items-center pb-3 border-bottom mb-3">
               <h1 class="display-5">Checkout</h1>
-              <a href="products-list.html" class="text-uppercase fs-7 fw-bold"> <i class="bi bi-arrow-left"></i> Back to Products</a>
+              <a href="cart.html" class="d-flex align-items-center gap-2 fw-bold fs-8"><div class="button-aesthetics black"></div> BACK</a>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h3>Account Info</h3>
-              <a href="products-list.html" class="text-uppercase text-decoration-underline fs-7 fw-bold">  GO TO ACCOUNT <i class="bi bi-chevron-right"></i></a>
+              <a href="" class="d-flex align-items-center gap-2 fw-bold fs-8"><div class="button-aesthetics black"></div> TO TRADEPLACE ACCOUNT</a>
             </div>
-            <div class="account-info-placeholder d-flex justify-content-center align-items-center">
-              Tradeplace Info PALCEHOLDER
+            <div class="account-info d-flex p-4">
+              <form class="w-100">
+                <div class="row g-3">
+                  <!-- Customer Code -->
+                  <div class="col-12">
+                    <label for="customerCode" class="form-label fw-bold">Customer Code</label>
+                    <input type="text" class="form-control" id="customerCode" name="customerCode" value="010101010110101010" >
+                  </div>
+                  
+                  <!-- First Name and Last Name -->
+                  <div class="col-12 col-md-6">
+                    <label for="firstName" class="form-label fw-bold">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" value="James" >
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="lastName" class="form-label fw-bold">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" value="Fernandes" >
+                  </div>
+                  
+                  <!-- Email and Phone Number -->
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label fw-bold">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="james@tradeplace.com" >
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="phoneNumber" class="form-label fw-bold">Phone Number</label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" value="+111222333444" >
+                  </div>
+                </div>
+              </form>
             </div>
-            <h2 class="my-4 fs-4">Shipping Address</h2>
+
+
+
+            <h2 class="my-4 fs-4">Order Type</h2>
+            <ul class="nav nav-tabs m-0 fw-bold" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#standard-order-tab" role="button" aria-selected="true">STANDART ORDER</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#other-order-tab" role="button" aria-selected="false">OTHER ORDER</a>
+              </li>
+            </ul>
+            <div class="tab-content mt-3">
+              <div id="standard-order-tab" class="tab-pane fade show active" role="tabpanel" aria-labelledby="standard-order-tab">
+                <form class="address-card">
+                  <div class="row g-3">
+                    <!-- Purchase Order Number -->
+                    <div class="col-12">
+                      <label for="purchaseOrderNumber" class="form-label fw-bold">Purchase Order Number</label>
+                      <input type="text" class="form-control" id="purchaseOrderNumber" name="purchaseOrderNumber" value="1231232423423423432">
+                    </div>
+                    
+                    <!-- Ship to Party -->
+                    <div class="col-12">
+                      <label for="shipToParty" class="form-label fw-bold">Ship to Party</label>
+                      <input type="text" class="form-control" id="shipToParty" name="shipToParty" placeholder="Enter">
+                    </div>
+                    
+                    <!-- Requested Delivery Date -->
+                    <div class="col-12">
+                      <label for="requestedDeliveryDate" class="form-label fw-bold">Requested Delivery Date</label>
+                      <div class="d-flex gap-2">
+                        <input type="date" class="form-control" id="requestedDeliveryDate" name="requestedDeliveryDate" value="4th July 2025" >
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div id="other-order-tab" class="tab-pane fade" role="tabpanel" aria-labelledby="other-order-tab">
+                <form class="address-card">
+                  empty
+                </form>
+              </div>
+            </div>
+
+
+
+            <h2 class="my-4 fs-4">Shipping Info</h2>
             <ul class="nav nav-tabs m-0 fw-bold" role="tablist">
               <li class="nav-item" role="presentation">
                 <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#saved-addresses-tab" role="button" aria-selected="true">SAVED ADDRESSES</a>
@@ -193,39 +270,55 @@
             </ul>
             <div class="tab-content mt-3">
               <div id="saved-addresses-tab" class="tab-pane fade show active" role="tabpanel" aria-labelledby="saved-addresses-tab">
-                <div class="d-flex gap-3 flex-column">
-                  <form class="address-card d-flex gap-3 align-items-center">
-                    <input type="checkbox" class="form-check-input" name="saved-address1">
-                    <div class="d-flex flex-column gap-1">
-                      <h4 class="m-0 fs-5">Address 1</h4>
-                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
+                <form class="address-card">
+                  <div class="row g-3">
+                    <!-- First Name and Last Name -->
+                    <div class="col-12 col-md-6">
+                      <label for="shippingFirstName" class="form-label fw-bold">First Name</label>
+                      <input type="text" class="form-control" id="shippingFirstName" name="shippingFirstName" value="James">
                     </div>
-                  </form>
-                  <form class="address-card d-flex gap-3 align-items-center">
-                    <input type="checkbox" class="form-check-input" name="saved-address1">
-                    <div class="d-flex flex-column gap-1">
-                      <h4 class="m-0 fs-5">Address 2</h4>
-                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
+                    <div class="col-12 col-md-6">
+                      <label for="shippingLastName" class="form-label fw-bold">Last Name</label>
+                      <input type="text" class="form-control" id="shippingLastName" name="shippingLastName" value="Fernandes">
                     </div>
-                  </form>
-                </div>
+                    
+                    <!-- Email and Phone Number -->
+                    <div class="col-12 col-md-6">
+                      <label for="shippingEmail" class="form-label fw-bold">Email</label>
+                      <input type="email" class="form-control" id="shippingEmail" name="shippingEmail" value="james@tradeplace.com">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="shippingPhoneNumber" class="form-label fw-bold">Phone Number</label>
+                      <input type="tel" class="form-control" id="shippingPhoneNumber" name="shippingPhoneNumber" value="+111222333444">
+                    </div>
+                    
+                    <!-- Address Line 1 -->
+                    <div class="col-12">
+                      <label for="addressLine1" class="form-label fw-bold">Address Line 1</label>
+                      <input type="text" class="form-control" id="addressLine1" name="addressLine1" value="123 Rue de la Paix">
+                    </div>
+                    
+                    <!-- City and Country -->
+                    <div class="col-12 col-md-6">
+                      <label for="city" class="form-label fw-bold">City</label>
+                      <input type="text" class="form-control" id="city" name="city" value="Paris">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="country" class="form-label fw-bold">Country</label>
+                      <input type="text" class="form-control" id="country" name="country" value="Paris">
+                    </div>
+                    
+                    <!-- ZIP -->
+                    <div class="col-12 col-md-6">
+                      <label for="zip" class="form-label fw-bold">ZIP</label>
+                      <input type="text" class="form-control" id="zip" name="zip" value="75002">
+                    </div>
+                  </div>
+                </form>
               </div>
               <div id="another-addresses-tab" class="tab-pane fade" role="tabpanel" aria-labelledby="another-addresses-tab">
-                <form class="d-flex gap-3 flex-column">
-                  <div class="address-card d-flex gap-3 align-items-center">
-                    <input type="radio" class="form-check-input" name="another-address" value="address1">
-                    <div class="d-flex flex-column gap-1">
-                      <h4 class="m-0 fs-5">Address 1</h4>
-                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
-                    </div>
-                  </div>
-                  <div class="address-card d-flex gap-3 align-items-center">
-                    <input type="radio" class="form-check-input" name="another-address" value="address2">
-                    <div class="d-flex flex-column gap-1">
-                      <h4 class="m-0 fs-5">Address 2</h4>
-                      <p class="m-0 fs-8 ">123 Rue de la Paix, 75002 Paris, France</p>
-                    </div>
-                  </div>
+                <form class="address-card">
+                  empty
                 </form>
               </div>
             </div>
@@ -233,24 +326,11 @@
           <div class="col-12 col-lg-5">
             <div class="checkout-summary d-flex flex-column">
               <div class="d-flex gap-3 py-3 border-bottom">
-                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/1.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
+                <img width="48" height="48" class="object-fit-contain" src="assets/images/best-sales/2.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
                 <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
                   <div class="d-flex flex-column gap-1">
-                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
-                    <p class="m-0 fs-8 ">YZ456789987654</p>
-                  </div>
-                  <span class="d-flex align-items-center gap-3">
-                    <span class="text-body-secondary">x1</span>
-                    <span class="fw-medium">2,249.00 EUR</span>
-                  </span>
-                </div>
-              </div>
-              <div class="d-flex gap-3 py-3 border-bottom">
-                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/2.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
-                <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
-                  <div class="d-flex flex-column gap-1">
-                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
-                    <p class="m-0 fs-8 ">YZ456789987654</p>
+                    <p class="m-0 fw-medium">Sea Salt Green refrigerator</p>
+                    <p class="m-0 fs-8 ">FAB28RDSA5</p>
                   </div>
                   <span class="d-flex align-items-center gap-3">
                     <span class="text-body-secondary">x2</span>
@@ -259,24 +339,11 @@
                 </div>
               </div>
               <div class="d-flex gap-3 py-3 border-bottom">
-                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/3.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
+                <img width="48" height="48" class="object-fit-contain" src="assets/images/best-sales/1.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
                 <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
                   <div class="d-flex flex-column gap-1">
-                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
-                    <p class="m-0 fs-8 ">YZ456789987654</p>
-                  </div>
-                  <span class="d-flex align-items-center gap-3">
-                    <span class="text-body-secondary">x2</span>
-                    <span class="fw-medium">4,498.00 EUR</span>
-                  </span>
-                </div>
-              </div>
-              <div class="d-flex gap-3 py-3 border-bottom">
-                <img width="48" height="48" class="object-fit-contain" src="assets/images/product-carousel/4.png" alt="SMEG refrigerator product thumbnail" loading="lazy">
-                <div class="d-flex align-items-center justify-content-between gap-1 flex-wrap flex-grow-1">
-                  <div class="d-flex flex-column gap-1">
-                    <p class="m-0 fw-medium">Yzqwt 456k FreshChoice</p>
-                    <p class="m-0 fs-8 ">YZ456789987654</p>
+                    <p class="m-0 fw-medium">Sea Salt Green refrigerator</p>
+                    <p class="m-0 fs-8 ">FAB28RDSA5</p>
                   </div>
                   <span class="d-flex align-items-center gap-3">
                     <span class="text-body-secondary">x2</span>

@@ -138,7 +138,8 @@ body .form-control {
   height: 48px;
 }
 body .form-control:focus {
-  outline: 2px solid #000;
+  outline: none;
+  border-color: var(--primary-color);
   box-shadow: none;
 }
 .nav-search-form {
@@ -391,9 +392,9 @@ select.form-select {
   border-radius: 0;
 }
 input.form-control {
-  border: 1px solid #000;
+  border: 1px solid #E3E3E3;
   height: 48px;
-  background: #FFF;
+  background: #F8F8F8;
 }
 .modal .modal-content {
   border-radius: 0;
