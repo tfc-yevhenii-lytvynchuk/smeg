@@ -307,7 +307,7 @@ h1,h2,h3,h4,h5,h6 {
 .smeg-product-category-card-image {
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   margin-bottom: 8px;
   max-height: 290px;
